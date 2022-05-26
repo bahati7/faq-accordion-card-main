@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,500;0,600;0,700;1,300;1,400;1,600&family=Kumbh+Sans:wght@100;400;700&family=Libre+Franklin:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;1,300;1,600;1,700&family=Open+Sans:wght@400;600&family=Overpass:ital,wght@0,100;0,300;0,600;1,100&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --font-family: "Kumbh Sans", sans-serif;
+  
+    --Lightgrayishblue: hsl(240, 5%, 91%);
+    --Verydarkgrayishblue: hsl(237, 12%, 33%);
+    --Darkgrayishblue: hsl(240, 6%, 50%);
+    --Softviolet: hsl(273, 75%, 66%);
+    --Softblue: hsl(240, 73%, 65%);
+    --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+    --Softred: hsl(14, 88%, 65%);
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+  }
+  body{
+    background-image: linear-gradient(
+        90deg,var(--Softviolet),
+        var(--Softblue)
+        
+    );
+    background-position: center;
+    overflow: hidden;
+    
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 7rem;
+    
+  }
+  .main-card{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;     
+      background-color: rgb(251, 245, 245);
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      height: 600px;
+      width: 1000px;
+  }
+  .card-illustration{
+      background-image: url("/images/bg-pattern-desktop.svg");
+      background-size: cover;
+      background-size: 700px;
+      background-repeat: no-repeat;
+      height: 600px;
+      background-position:  -290px;
+     
+  }
+  .box{
+       position: relative;
+       width: 400px;
+       height: 500px;
+       top: -250px;
+       left: -80px;
+       background: url("/images/illustration-box-desktop.svg")no-repeat;
+      
+  }
+  .woman{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    left: -30px;
+    top: 100px;
+      background: url("/images/illustration-woman-online-desktop.svg")no-repeat;
+
+  }
+ 
+  .divider{
+    width: 60%;
+    margin: 1rem 0;
+    height: 1px;
+    background-color: var(--Lightgrayishblue);
+  }
+  .card-text{
+      padding: 0 1rem;
+  }
+  .accordion:after {
+    content: url("/images/icon-arrow-down.svg");
+    font-size: 13px;
+    float: right;
+    margin-left: 2px;
+  }
+  .active, .accordion:hover {
+    color: var(--Softred);
+  }
+  .active:after {
+    transform: rotate(180deg);
+  }
+
+  .card-text h1{
+      padding-bottom: 1rem;
+      color: var(--Verydarkgrayishblue);
+      
+  }
+  .card-text h4{
+    padding-bottom: 0.5rem;
+    padding-right: 3rem;
+    color: var(--Verydarkgrayishblue);
+    cursor: pointer;
+    width: 30rem;
+  }
+  .card-text p{
+    color: var(--Darkgrayishblue);
+    width: 25rem;
+    font-size: 15px;
+}
+.panel{
+    max-width: 100%;
+    width: 500px;
+    display: none;
+}
+
+
+/**MEDIA QUERIES*/
+
+
+ @media (max-width: 1000px) { 
+     body{
+         overflow: visible;
+     }
+     .main{
+         
+        
+     }
+    .main-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;     
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 600px;
+        width: auto;
+        padding: 5rem 1rem;
+    }
+
+    .card-illustration{
+        background: url("/images/bg-pattern-mobile.svg")no-repeat;
+        position: relative;
+        width: 300px;
+        height: 500px;
+        padding:0 0.5rem;
+       
+    }
+    .box{
+         display: none;
+        
+    }
+    .woman{
+      position: relative;
+      width: 300px;
+      height: 500px;
+      left: -20px;
+      top: -100px;
+        background: url("/images/illustration-woman-online-mobile.svg")no-repeat;
+  
+    }
+    .card-text{
+        margin-top: -20rem;
+        width: 20rem;
+        padding: 0rem
+    }
+    .card-text h4{
+        padding-right: 0rem;
+        width: 20rem;
+      }
+      .card-text p{
+        width: 18rem;
+        text-justify: distribute;
+    }
+    .card-text h1{
+        text-align: center;
+        
+    }
+    .divider{
+        width: 90%;
+        margin: 1rem 0;
+        
+      }
+     
+ } 
+
+
