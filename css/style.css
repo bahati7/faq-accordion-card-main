@@ -177,6 +177,7 @@
     .card-text h4{
         padding-right: 0rem;
         width: 20rem;
+		position:fixed;
       }
       .card-text p{
         width: 18rem;
