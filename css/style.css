@@ -142,7 +142,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
         height: 600px;
-		max-height:1500px;
+		max-height:auto;
         width: auto;
         padding: 5rem 1rem;
 		margin-top:5rem;
