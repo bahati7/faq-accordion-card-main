@@ -194,14 +194,10 @@
         
       }
       .attribution{
-        position: absolute;
-        top: 8rem;
-        left: 12rem;
-        /* display: none; */
+       
+        display: none; 
       }
-     .attribution a{
-        color: white;
-      }
+     
      
  } 
 
